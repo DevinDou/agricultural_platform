@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+質問を投稿する
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h2>新しい質問を投稿する</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="questionTitle">質問のタイトル</label>
+            <input type="text" class="form-control" id="questionTitle" name="title" placeholder="タイトルを入力">
+        </div>
+        <div class="form-group">
+            <label for="questionBody">質問の内容</label>
+            <textarea class="form-control" id="questionBody" name="body" rows="3" placeholder="質問の詳細を記述..."></textarea>
+        </div>
+
+        <!--月の選択-->
+        <div class="form-group">
+            <label>選択月（複数選択可）:</label><br>
+            {% for month in range(1, 13) %}
+            <input type="checkbox" id="month{{month}}" name="months" value="{{month}}">
+            <label for="month{{month}}">{{month}}月</label><br>
+            {% endfor %}
+        </div>
+
+
+        <!--農産物の選択-->
+        <div class="form-group">
+            <label>農産物選択（複数選択可）:</label><br>
+            <input type="checkbox" id="crop1" name="crops" value="タマネギ">
+            <label for="crop1">タマネギ</label><br>
+            <input type="checkbox" id="crop2" name="crops" value="トマト">
+            <label for="crop2">トマト</label><br>
+            <input type="checkbox" id="crop3" name="crops" value="ジャガイモ">
+            <label for="crop3">ジャガイモ</label><br>
+            <input type="checkbox" id="crop4" name="crops" value="白菜">
+            <label for="crop4">白菜</label><br>
+            <input type="checkbox" id="crop5" name="crops" value="キャベツ">
+            <label for="crop5">キャベツ</label><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary">質問を投稿</button>
+    </form>
+</div>
+{% endblock %}

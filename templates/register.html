@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login_register.css') }}">
+{% endblock %}
+
+{% block title %}登録{% endblock %}
+
+{% block body %}
+<h3 class="page-title">登録</h3>
+<form action="{{ url_for('auth.register') }}" method="post">
+    <div class="form-container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="form-group">
+            {% for message in messages %}
+            <div class="alert alert-warning">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="form-group">
+            <input type="text" name="username" placeholder="ユーザー名" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="パスワード" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" name="email" placeholder="メールアドレス" class="form-control">
+        </div>
+        <div class="form-group">
+        <label for="address">札幌市内の住所</label>
+        <select class="form-control" id="address" name="address">
+            <option value="">住所を選択してください</option>
+            <option value="中央区">中央区</option>
+            <option value="北区">北区</option>
+            <option value="東区">東区</option>
+            <option value="白石区">白石区</option>
+            <option value="厚別区">厚別区</option>
+            <option value="豊平区">豊平区</option>
+            <option value="南区">南区</option>
+            <option value="西区">西区</option>
+            <option value="手稲区">手稲区</option>
+
+        </select>
+    </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block">今すぐ登録</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

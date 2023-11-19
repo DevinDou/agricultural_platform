@@ -1,0 +1,57 @@
+/* 问题列表样式 */
+.question-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.question-li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* 问题标题链接样式 */
+.question-title a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #259;
+}
+
+/* 问题作者和时间样式 */
+.question-info {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* 问题内容样式 */
+.question-content {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* 问题作者头像样式 */
+.question-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* 用户名样式 */
+.username {
+    font-weight: bold;
+    color: #259;
+}
+
+/* 问题详情按钮样式 */
+.detail-button {
+    background-color: #259;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}

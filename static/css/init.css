@@ -1,0 +1,14 @@
+/* 设置全局背景色 */
+body {
+    background-color: #f3f3f3;
+}
+
+/* 自定义全局链接颜色 */
+a {
+    color: #259;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
